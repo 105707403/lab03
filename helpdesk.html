@@ -9,6 +9,7 @@
   <title>CWA Help Desk Appointment</title>
 </head>
 <body>
+<form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
   <a href="http://swin.edu.au"> <img src="../lab03/images/logo.png" alt="Swinburne Logo"></a>
   <h1><strong>CWA Help Desk Appointment </strong></h1>
   <p>The Help Desk is located in ATC620. Open 10:30 to 19:00 Monday to Friday</p>
@@ -25,14 +26,12 @@
   </fieldset>
   <fieldset>
 			<legend>Your unit</legend>
+      <input type="radio" id="COS10011" name="COS10011" value="COS10011"/>
 			<label for="COS10011">COS10011</label>
-			<input type="radio" id="COS10011" name="COS10011" value="COS10011" required="required"/>
+      <input type="radio" id="COS60004" name="COS60004" value="COS60004"/>
 			<label for="COS60004">COS60004</label>
-			<input type="radio" id="COS60004" name="COS60004" value="COS60004"
-      required="required"/>
+      <input type="radio" id="COS60007" name="COS60007" value="COS60007"/>
       <label for="COS60007">COS60007</label>
-			<input type="radio" id="COS60007" name="COS60007" value="COS60007"
-      required="required"/>
       <p><label for="tutor_name">Your Tutor</label></p>
         <select name="tutor_name" id="tutor_name">
           <option value="">Please Select</option>
@@ -59,11 +58,12 @@
   <fieldset>
     <legend>Preferred Date/Time</legend>
       <p><label for="date">Date</label>
-        <input type="date" pattern="\d{2}/\d{2}/\d{4}" name= "date" id="date" maxlength="10" size="10"/>
+        <input type="text" pattern="\d{2}/\d{2}/\d{4}" name= "date" id="date" placeholder="dd/mm/yyyy" maxlength="10" size="10"/>
       <p><label for="time">Time</label>
-			<input type="time" pattern="^([01]\d|2[0-3]):([0-5]\d)$" name= "time" id="time" placeholder="00:00" maxlength="10" size="10"/>
+			<input type="text" pattern="^([01]\d|2[0-3]):([0-5]\d)$" name= "text" id="time" placeholder="00:00" maxlength="10" size="10"/>
   </fieldset>
   <input type= "submit" value="Book"/>
 	<input type= "reset" value="Reset Form"/>
+</form>
 </body>
 </html>
